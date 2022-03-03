@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AbbyWeb.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    
 </head>
 <body>
     <header>
@@ -26,6 +28,9 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-page="/Categories/Index">Категории</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page= "/CategoryTemp/Index">Категории - автомат</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -33,6 +38,7 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <partial name="_Notification" /> 
             @RenderBody()
         </main>
     </div>
